@@ -26,7 +26,8 @@ angular.module('vtex.ngCurrencyMask', [])
 
     ctrl.$formatters.unshift (value) ->
       return unless value?
-      Math.abs (value / 100)
+      value = Math.abs (value / 100)
+      value.toFixed 2
 
     elem[0].addEventListener 'blur', ->
       applyCurrencyFilter()

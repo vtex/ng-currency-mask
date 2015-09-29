@@ -40,7 +40,8 @@
           if (value == null) {
             return;
           }
-          return Math.abs(value / 100);
+          value = Math.abs(value / 100);
+          return value.toFixed(2);
         });
         elem[0].addEventListener('blur', function() {
           return applyCurrencyFilter();
