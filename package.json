@@ -1,0 +1,38 @@
+{
+  "name": "ng-currency-mask",
+  "version": "1.0.0",
+  "description": "Angular directive for seamlessly binding currencies to inputs",
+  "main": "dist/ng-currency-mask.min.js",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-coffee": "^0.13.0",
+    "grunt-contrib-uglify": "^0.9.1"
+  },
+  "scripts": {
+    "test": "npm test",
+    "start": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtex/ng-currency-mask.git"
+  },
+  "keywords": [
+    "currency",
+    "monetary",
+    "mask",
+    "input",
+    "transformation",
+    "view",
+    "model",
+    "angular",
+    "directive",
+    "vtex"
+  ],
+  "author": "Gustavo Giserman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vtex/ng-currency-mask/issues"
+  },
+  "homepage": "https://github.com/vtex/ng-currency-mask#readme"
+}
