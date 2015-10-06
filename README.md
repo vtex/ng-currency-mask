@@ -1,9 +1,11 @@
 # Angular Currency Mask
-Currency input for AngularJS
+Currency input handler for AngularJS (1.X)
 
 ## Usage
 
 #### Reference script
+
+Find both compiled and minified versions inside `dist` folder.
 
 ```html
 <script src="ng-currency-mask.min.js"></script>
@@ -43,7 +45,10 @@ angular.module 'yourApp', ['vtex.ngCurrencyMask']
 
 ## Development - Contribute!
 
-Inside `src` you can find this module source code, written in **CoffeeScript**. To build the `.js` and uglify it, install npm dev-dependencies and run grunt:
+Inside `src` you can find this module source code, written in **CoffeeScript**.
+Tests can be found in `spec` folder.
+
+To build the `.js` and uglify it, install npm dev-dependencies and run grunt:
 
     (sudo) npm i
     grunt
