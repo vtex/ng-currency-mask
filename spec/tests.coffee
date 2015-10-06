@@ -4,12 +4,34 @@ describe 'vtex.ngCurrencyMask', ->
   $scope = null
   $compile = null
   markup = '<input type="text" name="discount" ng-model="model.value" currency-mask />'
+  Utils = null
 
   beforeEach inject (_$compile_, _$rootScope_) ->
     $scope = _$rootScope_
     $compile = _$compile_
 
-  describe 'currency-mask directive', ->
+
+  describe 'CurrencyMaskUtils Service', ->
+
+    beforeEach inject (_CurrencyMaskUtils_) ->
+      Utils = _CurrencyMaskUtils_
+
+    it 'should exist', -> expect(Utils).toBeDefined()
+
+    it 'clearSeparators # should clear separators from input value and return float', ->
+      expect(Utils.clearSeparators('1,250.90')).toBe 1250.9
+      expect(Utils.clearSeparators('1,500,250.99')).toBe 1500250.99
+
+    it 'toIntCents # should transform from float to int (cents)', ->
+      expect(Utils.toIntCents(1250.90)).toBe 125090
+      expect(Utils.toIntCents(1500250.99)).toBe 150025099
+
+    it 'toFloatString # should transform from int (cents) to float', ->
+      expect(Utils.toFloatString(125090)).toBe '1250.90'
+      expect(Utils.toFloatString(150025099)).toBe '1500250.99'
+
+
+  describe 'currencyMask directive', ->
 
     compileEl = (scope) ->
       el = $compile(markup) scope
